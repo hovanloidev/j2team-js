@@ -33,28 +33,65 @@ document.getElementById("btn-bai1").onmouseenter = () => {
   }
 };
 
-document.getElementById("btn-bai2").onclick = () => {
+// Bài 2
+function bai2() {
   let number = +document.getElementById("Number2").value;
   let result1 = document.getElementById("result2");
   let result2 = document.getElementById("result21");
 
-  for (let index = 1; index <= number; index++) {
-    result1.innerHTML += index + " ";
-  }
-
-  for (let index = number; index >= 1; index--) {
-    result2.innerHTML += index + " ";
-  }
-};
-
-document.getElementById("btn-bai3").addEventListener("keypress", (evt) => {
-  if (evt.key === "Enter") {
-    let numberInput = document.getElementById("number3").value;
-    let result = document.getElementById("result3");
-    var count = 0;
-    for (let index = 1; index <= numberInput.length; index++) {
-      count++;
+  if (number < 0) {
+    for (let index = number; index <= 1; index++) {
+      result1.innerHTML += index + " ";
     }
-    result.innerHTML = "số nhập " + count;
+    for (let index = 1; index >= number; index--) {
+      result2.innerHTML += index + " ";
+    }
+  } else if (number >= 0) {
+    for (let index = 1; index <= number; index++) {
+      result1.innerHTML += index + " ";
+    }
+    for (let index = number; index >= 1; index--) {
+      result2.innerHTML += index + " ";
+    }
+  }
+
+  document.getElementById("Number2").value = "";
+}
+
+// Enter
+document.getElementById("Number2").addEventListener("keypress", (evt) => {
+  if (evt.key === "Enter") {
+    bai2();
+    evt.preventDefault();
   }
 });
+
+// Click
+document.getElementById("btn-bai2").onclick = () => {
+  bai2();
+};
+
+// Bài 3
+function bai3() {
+  let numberInput = document.getElementById("number3").value;
+  let result = document.getElementById("result3");
+  var count = 0;
+  for (let index = 1; index <= numberInput.length; index++) {
+    count++;
+  }
+  result.innerHTML = "số lần nhập " + count;
+  document.getElementById("Number2").value = "";
+}
+
+// Enter
+document.getElementById("number3").addEventListener("keypress", (evt) => {
+  if (evt.key === "Enter") {
+    bai3();
+    evt.preventDefault();
+  }
+});
+
+// Click
+document.getElementById("btn-bai3").onclick = () => {
+  bai3();
+};
