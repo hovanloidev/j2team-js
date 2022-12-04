@@ -65,12 +65,12 @@ function chekPrime(number) {
   if (number < 2) {
     return false;
   }
-  for (let index = 2; index <= Math.sqrt(number); index++) {
+  for (let index = 1; index <= number; index++) {
     if (number % index === 0) {
       count++;
     }
   }
-  if (count === 0) {
+  if (count === 2) {
     return true;
   } else {
     return false;
