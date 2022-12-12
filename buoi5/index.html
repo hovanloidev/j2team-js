@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="app">
+            <h3 class="header">
+                <a href="#">Your Logo</a>
+            </h3>
+
+            <div class="content">
+                <div class="wrap-form">
+                    <form action="" class="form-control">
+                        <p class="text">Welcome !</p>
+                        <h3 class="heading">Đăng ký</h3>
+                        <p class="desc">(*) Bắt buộc</p>
+                        <div class="form-label-input">
+                            <label for="">Email *</label>
+                            <input
+                                id="Email"
+                                type="email"
+                                name=""
+                                value=""
+                                placeholder="Nhập email của bạn"
+                            />
+                            <span id="notiEmail" class="noti"></span>
+                        </div>
+
+                        <div class="form-label-input">
+                            <label for="">Tên *</label>
+                            <input
+                                id="Name"
+                                type="text"
+                                name=""
+                                value=""
+                                placeholder="Nhập tên của bạn"
+                            />
+                            <span id="notiName" class="noti"></span>
+                        </div>
+
+                        <div class="form-label-input">
+                            <label for="">Mật khẩu *</label>
+                            <input
+                                id="Pass"
+                                type="password"
+                                name=""
+                                value=""
+                                placeholder="Nhập mật khẩu của bạn"
+                            />
+                            <span id="notiPass" class="noti"></span>
+                        </div>
+
+                        <div class="form-label-input">
+                            <label for="">Giới tính *</label>
+                            <input
+                                type="radio"
+                                name="sex"
+                                value=""
+                                class="sex"
+                            />Nam
+                            <input
+                                type="radio"
+                                name="sex"
+                                value=""
+                                class="sex ml-20"
+                            />Nữ
+                            <span id="notiSex" class="noti"></span>
+                        </div>
+
+                        <div class="form-label-input">
+                            <label for="">Địa chỉ *</label>
+
+                            <textarea
+                            id="Address"
+                                rows="4"
+                                cols="50"
+                                placeholder="Nhập địa chỉ ..."
+                            ></textarea>
+
+                            <span id="notiAddress" class="noti"></span>
+                        </div>
+
+                        <div class="form-label-input">
+                            <label for="">Sở thích</label>
+                            <textarea
+                                rows="4"
+                                cols="50"
+                                placeholder="Nhập sổ thích ..."
+                            ></textarea>
+                        </div>
+
+                        <button type="button" onclick="validateForm()">
+                            Register
+                        </button>
+                        <p class="footer-text">
+                            Already have an Account ? <a href="">Register</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="banner">
+                    <img
+                        src="./img/small-team-discussing-ideas-2194220-0.png"
+                        alt=""
+                    />
+                </div>
+            </div>
+        </div>
+        <script src="./main.js"></script>
+    </body>
+</html>
