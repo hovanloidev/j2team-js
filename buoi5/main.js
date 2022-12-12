@@ -32,6 +32,12 @@ function validateUserName() {
         notification.innerHTML = "Tên phải là chữ";
         return false;
     }
+
+    let regex = /^[A-Z][a-z]+( [A-Z][a-z]*)*$/
+    if (!regex.test(name)) {
+        notification.innerHTML = "Tên sai định dạng";
+        return false;
+    }
     noti.innerHTML = "";
     return true;
 }
